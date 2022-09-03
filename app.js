@@ -99,6 +99,7 @@ app.post("/", function(req, res){
   const itemName = req.body.newItem;
   const listName = req.body.list;
 
+ if(itemName){
   const item = new Item({
     name: itemName
   });
@@ -113,6 +114,13 @@ app.post("/", function(req, res){
       res.redirect("/" + listName);
     });
   }
+ }else{
+    if(listName === "Today"){
+      res.redirect("/");
+    }else{
+      res.redirect("/" + listName);
+    }
+ }
 });
 
 app.post("/delete", function(req, res){
@@ -141,6 +149,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
