@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
   min-height: 1000px;
-  font-family: 'helvetica neue';
+  
 }
 
 h1 {
@@ -47,7 +57,7 @@ p {
   margin: 0;
   padding: 20px;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 300;
   color: #00204a;
 }
 
@@ -93,4 +103,15 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+@media only screen and (max-width: 760px) {
+  html {
+
+    background-color: #d3c1f2;
+    background-image: none;
+    min-height: 100vh;
+    font-family: 'helvetica neue';
+  }
+
 }
